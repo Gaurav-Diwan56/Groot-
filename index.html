@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way to Soft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Way to Soft</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#how-to-use">How to Use</a>
+            <a href="#login">Login</a>
+        </nav>
+    </header>
+    <main id="home">
+        <h2>Create, Build, and Publish Your Apps</h2>
+        <p>Turn your ideas into software, games, or APKs with ease.</p>
+        <button onclick="goToEditor()">Go to Editor</button>
+    </main>
+    <section id="about">
+        <h3>About Way to Soft</h3>
+        <p>Way to Soft is a powerful, web-based platform for building and publishing apps or software. Whether you're a beginner or a pro, our tools will help you every step of the way.</p>
+    </section>
+    <section id="how-to-use">
+        <h3>How to Use</h3>
+        <ul>
+            <li>Sign up and log in to create a project.</li>
+            <li>Write or upload your code using our editor.</li>
+            <li>Compile, debug, and build APKs with one click.</li>
+            <li>Publish your app or share it with the world!</li>
+        </ul>
+    </section>
+    <footer>
+        <p>© 2025 Way to Soft - All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor - Way to Soft</title>
+    <style>
+        #editor-container {
+            height: 90vh;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="editor-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.js"></script>
+    <script>
+        require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs' } });
+        require(['vs/editor/editor.main'], function() {
+            monaco.editor.create(document.getElementById('editor-container'), {
+                value: '// Write your code here',
+                language: 'javascript',
+                theme: 'vs-dark'
+            });
+        });
+    </script>
+</body>
+</html>
